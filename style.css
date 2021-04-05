@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background-color: #f9de59;
+  font-family: Poppins
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 20px 0;
+  color: black;
+}
+
+form {
+  position:  relative;
+  z-index:  998;
+  margin: 20px 0;
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 5px;
+
+}
+
+form .input-block {
+  margin-bottom: 20px;
+}
+
+form .input-block label {
+  font-size: 14px;
+  color: darkslateblue;
+}
+
+form .input-block input {
+  width: 100%;
+  display: block;
+  margin-top: 8px;
+  padding: 7px;
+  font-size: 16px;
+  color: black;
+  border-radius: 2px;
+  border: 1px solid #ccddef;
+  outline-color: #f9de59;
+}
+
+form .btn-login {
+  display: block;
+  min-width: 120px;
+  border: none;
+  background-color: #f9de59;
+  color: black;
+  border-radius: 25px;
+  margin: auto;
+  padding: 7px;
+}
+
+/* APARIÇÃO DO FORM */
+
+form {
+  animation-name:  fade;
+  animation-duration: 0.2s;
+
+}
+@keyframes fade {
+  from{
+    opacity:  0;
+    transform:  scale(.9);
+
+    } to {
+    opacity: 1;
+    transform: scale(1);
+    }
+}
+
+form .input-block:nth-child(1){
+  animation: move 500ms;
+}
+form .input-block:nth-child(2){
+  animation: move 400ms;
+  animation-delay: 150ms;
+  animation-fill-mode: backwards;
+}
+form .btn-login{
+  animation: move 500ms;
+  animation-delay: 250ms;
+  animation-fill-mode: backwards;
+}
+@keyframes move {
+  from{
+    opacity:  0;
+    transform:  translateX(-35%);
+
+    } to {
+    opacity: 1;
+    transform:  translateX(0%);
+    }
+}
+
+/* FIM ANIMAÇÃO FORMULÁRIO */
+
+/* INÍCIO - ANIMAÇÃO LOGO/TEXTO Fonte: https://css-tricks.com/snippets/css/typewriter-effect/   */
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* FINAL -  ANIMAÇÃO LOGO/TEXTO Fonte: https://css-tricks.com/snippets/css/typewriter-effect/   */
+
+/* Fonte Google - Import */
+
+h1 {
+  font-family: Homemade Apple;
+}
+
+/* FIM - Fonte Google Import */
+
+
+
+.form-hide {
+  animation: down 500ms forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes down {
+  from{
+    transform: translateY(0)
+
+    } to{
+      transform: translateY(100vh)
+
+    }
+}
+
+/* FORM NO-NO  - INÍCIO */
+
+form.validate-error{
+  animation:  nono 200ms linear, fase paused;
+  animation-iteration-count: 2;
+}
+
+
+@keyframes nono {
+  0% {
+    transform: translateX(0)
+
+  }
+  35%{
+    transform: translateX(-15%)
+
+  }
+  70%{
+    transform: translateX(15%)
+
+  }
+  100%{
+    transform: translateX(0)
+
+  }
+}
+
+/* FORM NO-NO  - FIM */
+
+/* squares */
+
+body {
+  overflow: hidden;
+}
+
+.squares li {
+  width: 40px;
+  height: 40px;
+  background-color: #472151;
+  display:  block;
+  position:  absolute;
+  bottom: -40px;
+  animation:  up 2s infinite;
+  animation-direction: alternate;
+    position:  relative;
+  z-index:  990;
+}
+
+@keyframes up {
+  from{
+    opacity: 0; 
+    transform: translateY(0);
+  } 
+  50%{
+    opacity: 1;
+  }
+  to{
+
+    transform:  translateY(-900px) rotate(960deg);
+  }
+
+}
+
+/* FINAL squares */
+
+a{
+  text-decoration: none;
+  color: black;
+}
