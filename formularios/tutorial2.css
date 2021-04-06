@@ -32,6 +32,7 @@ h3{
 	left:  40px;
 	transition:  0.5s;
 
+
 }
 
 form input {
@@ -70,6 +71,14 @@ form button{
 }
 
 #Form3{
+	left:  450px;
+}
+
+#form2{
+	left:  450px;
+}
+
+#form3{
 	left:  450px;
 }
 
@@ -128,32 +137,80 @@ a{
   color: black;
 }
 
-/* Bũttons - trocar CPF e CNPJ */
 
+/* Tutorial 2 - Fonte: https://www.youtube.com/watch?v=L5WWrGMsnpw&t=34s */
+
+
+.button-box{
+	margin-top: 3rem;
+	width:  250px;
+	display:  flex;
+	justify-content: center;
+	position:  relative;
+	box-shadow: 0 0 20px #ff61241f;
+	border-radius:  30px;
+	background: lightgrey;
+	color: black;
+
+}
 
 #buttons{
 	display: flex;
 	justify-content: center;
-
 }
 
-#bt1 {
-	width: 200px;
-	height:  40px;
-	margin:  0 10px;
-	background: #472151;
-	border-radius:  30px;
-	outline: none;
-	color:  #fff;
+.toggle-btn{
+	padding: 10px 30px;
 	cursor:  pointer;
-	margin-top: 2rem;
-}
-
-#bt1 a{
-	 text-decoration: none;
-  color: white
-
+	background: transparent;
+	border:  0;
+	outline:  none;
+	position:  relative;
 }
 
 
-/*------------------------------------*/
+#btn {
+	top: 0;
+	left:  0;
+	position:  absolute;
+	width: 140px;
+	height: 100%;
+	background: grey;
+	border-radius: 30px;
+	transition: .5s;
+}
+
+
+/* Separando os formulários de CNPJ e CPF */
+
+
+
+#cnpj{
+	left: 450px;
+
+}
+
+#cpf{
+	left: 50px ;
+
+}
+
+#progress2{
+	position:  absolute;
+	height: 100%;
+	width:  120px;
+	background: #472151;
+	transition:  1s;
+}
+
+#progress2::after{
+	content: '';
+	height: 0;
+	width: 0;
+	border-top: 20px solid transparent;
+	border-bottom:  20px solid transparent;
+	position:  absolute;
+	right:  -20px;
+	top:  0;
+	border-left:  20px solid #472151;
+}

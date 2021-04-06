@@ -25,9 +25,11 @@ section {
 
 h1 {
   font-size: 32px;
+  font-weight: lighter;
   letter-spacing: 1px;
   margin: 20px 0;
   color: black;
+  z-index: 1100;
 }
 
 form {

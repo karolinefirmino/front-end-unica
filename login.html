@@ -14,22 +14,23 @@
     <section class="form-section">
         <h1 class="animate_animate animate__fadeInDown"><a href="home.html">Lispector Livraria</a></h1>
         <div class="form-wrapper">
-            <form action="">
+            <form onSubmit="return ( basico() )" name="FormLogin" action="">
                 <div class="input-block">
-                    <label for="login-email">Email</label>
-                    <input type="email" id="login-email" required />
+                    <label for="email">Email</label>
+                    <input name="email" type="email" id="login-email" required />
                 </div>
                 <div class="input-block">
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" required />
+                    <label for="password">Password</label>
+                    <input name="password" type="password" id="login-password" required />
                 </div>
-                <button type="submit" class="btn-login">Login</button>
+                <button type="submit" class="btn-login" id='validate'>Login</button>
             </form>
         </div>
     </section>
     <ul class="squares">
     </ul>
     <script src="script.js"></script>
+    <script src="login-validation.js"></script>
 </body>
 
 </html>

@@ -94,15 +94,64 @@
                             <li>
                                 <a href="" target="_blank"><img src="img/victorhugo.jpg" alt="image1" /></a>
                                 <div class="sb-description">
-                                    <h3>Groundbreaking Artist</h3>
+                                    <h3>Os Miseráveis - Victor Hugo</h3>
                                 </div>
                             </li>
                             <li>
                                 <a href="" target="_blank"><img src="img/poirot.jpg" alt="image1" /></a>
                                 <div class="sb-description">
-                                    <h3>Selfless Philantropist</h3>
+                                    <h3>The Early Cases of Hercule Poirot - Agatha Christie</h3>
                                 </div>
                             </li>
+                            <li>
+                                <a href="" target="_blank"><img src="img/kasuoishiguro2.jpg" alt="image1" /></a>
+                                <div class="sb-description">
+                                    <h3>Não Me Abandone Jamais- Kasuo Ishiguro</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" target="_blank"><img src="img/huxley.jpg" alt="image1" /></a>
+                                <div class="sb-description">
+                                    <h3>Admirável Mundo Novo - Huxley</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" target="_blank"><img src="img/ianmc.jpg" alt="image1" /></a>
+                                <div class="sb-description">
+                                    <h3>Reparação - Ian McEwan</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" target="_blank"><img src="img/kasuoishiguro.jpg" alt="image1" /></a>
+                                <div class="sb-description">
+                                    <h3>O Gigante Enterrado - Kasuo Ishiguro</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" target="_blank"><img src="img/asimov.jpg" alt="image1" /></a>
+                                <div class="sb-description">
+                                    <h3>Eu Robô - Isaac Asimov</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" target="_blank"><img src="img/guimaraesrosa.webp" alt="image1" /></a>
+                                <div class="sb-description">
+                                    <h3>Grande Sertão: Veredas - Guimarães Rosa</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" target="_blank"><img src="img/terrason_mbula.jpg" alt="image1" /></a>
+                                <div class="sb-description">
+                                    <h3>Terra Sonâmbula - Mia Couto</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" target="_blank"><img src="img/geraldinebrooks.jpg" alt="image1" /></a>
+                                <div class="sb-description">
+                                    <h3>As Memórias do Livro - Geraldine Brooks</h3>
+                                </div>
+                            </li>
+
                         </ul>
                     </div> <!-- border test FINNAL -->
                     <div id="shadow" class="shadow"></div>
@@ -124,6 +173,25 @@
         <div class="subscribe">
             <h2 class="typewriter">Inscreva-se para receber atualizações</h2>
         </div>
+        <!--<form id="SubForm" action="">
+  <div class="sub-div">
+    <input type="text" placeholder="Email " name="mail" required>
+  </div>
+  <div class="sub-final">
+   
+    <input id="sub-btn" type="submit" value="Subscribe"> 
+</div>
+
+</form>-->
+        <!-- Signup-->
+        <div class="inscricao">
+            <div class="login_bar">
+                <span class="login-sub">email@gmail.com</span>
+                <span class="subscribe_button" onclick="subscribeOnClick()">Inscrever-me</span>
+                <span class="subscribing"></span>
+                <span class="thanks"> Você foi inscrita(o) com sucesso!</span>
+            </div>
+        </div>
         <footer>
             <div id="wave2">
                 <div class="custom-shape-divider-bottom-1617239176">
@@ -135,12 +203,38 @@
             <div class="info">
                 <h5>Karoline Rodrigues Firmino - 2021</h5>
             </div>
-            <div class="licenca"> <a href="https://creativecommons.org/licenses/?lang=pt_BR" target="_blank"><img src="img/licenca-creative-commons-by-nc-nd.png"  /></a></div>
-            <div class="github"> <a href="https://github.com/karolinefirmino" target="_blank"><img src="img/github.png" /></a></div>
+            <div class="licenca"> <a href="https://creativecommons.org/licenses/?lang=pt_BR" target="_blank"><img src="img/licenca-creative-commons-by-nc-nd.png" /></a></div>
+            <div class="github"> <a href="https://github.com/karolinefirmino/front-end-unica" target="_blank"><img src="img/github.png" /></a></div>
             <div class="linkedin"><a href="https://br.linkedin.com/in/karoline-rodrigues-firmino-a3964612a" target="_blank"><img src="img/linkedin.png" /></a> </div>
         </footer>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script type="text/javascript" src="./Slicebox-master/js/jquery.slicebox.js"></script>
+        <!-- INSCRIÇÃO ANIMADA JS-->
+        <script>
+        var subscribe_button = document.querySelector(".subscribe_button");
+
+        subscribe_button.addEventListener('click', function() {
+            var subscribing = document.querySelector(".subscribing");
+            var thanks = document.querySelector(".thanks");
+            var login = document.querySelector(".login-sub");
+
+            subscribing.classList.add("subscribing_active");
+            subscribe_button.classList.add("subscribe_button_active");
+            setTimeout(function() {
+                login.classList.add("login_active");
+            }, 1200);
+            setTimeout(function() {
+                thanks.classList.add("thanks_active");
+            }, 1400);
+
+            setTimeout(function() {
+                thanks.classList.remove("thanks_active");
+                login.classList.remove("login_active");
+                subscribing.classList.remove("subscribing_active");
+                subscribe_button.classList.remove("subscribe_button_active");
+            }, 4000);
+        });
+        </script>
         <script type="text/javascript">
         $(function() {
 
