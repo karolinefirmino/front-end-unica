@@ -24,13 +24,13 @@
                     <label for="password">Password</label>
                     <input name="password" type="password" id="password"  />
                 </div>
-                <button type="submit" class="btn-login" id='validate')>Login</button>
+                <button type="submit" class="btn-login" id='validate')><a href="./index.html">Login</a></button>
             </form>
         </div>
     </section>
     <ul class="squares">
     </ul>
-    <script src="script.js"></script>
+    <script src="login-script.js"></script>
     <!--<script src="login-validation.js"></script>-->
     <script>
         var email = document.getElementById('email')
@@ -74,7 +74,10 @@
                         errorElement.innerText = messages.join(', ')
                         }
                     if(password.value.length > 6) {
-                        console.log('A senha é válida!')} 
+                        console.log('A senha é válida!') 
+                        alert("Dados válidos! Login realizado com sucesso!")
+                        window.location.href("./index.html")
+                    }
                     else {
                         console.log('A senha é inválida')
                         alert('Senha inválida')
