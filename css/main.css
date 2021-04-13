@@ -15,20 +15,22 @@ body {
     background: #f9de59;
     color: black;
     user-select: none;
+    
 }
 
 /* GRID CSS -INÍCIO - DEFINIÇÃO DAS VARIÁVEIS */
 
 #specific-container {
-    background: gray;
+    background:grey;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 90vh 120vh 50vh 60vh 40vh;
-    grid-template-areas: "h l l l"
+    grid-template-areas: "l l l l"
         "m m m m"
         "a a a a"
         "i i i i"
         "f f f f";
+    width: 100%;
 }
 
 a{
@@ -37,11 +39,7 @@ a{
 }
 header {
     background: #F5DF4D;
-    grid-area: h;
-
-
-
-
+    grid-area: l;
 }
 
 h1 {
@@ -84,14 +82,20 @@ footer {
 /* INÍCIO - NOME DA LIVVRARIA */
 h1 {
     font-family: Homemade Apple;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 95px;
+    font-size: 500%;
     font-weight: lighter;
-
+    grid-area: l;
+    width: 100%;
+    text-align: center;
+    padding:10% 5% 0 0 ;
 
 }
+/* Animação Imagem - Clarice e h1 - Início */
+
+
+
+/* Animação Imagem - Clarice e h1 - Final*/
+
 
 /* FIM- NOME DA LIVVRARIA */
 
@@ -146,7 +150,8 @@ h1 {
 
 .stage {
     position:  fixed;
-    width: 250px;
+    width: 25%;
+    height: 90%;
     grid-area: h;
     margin-top: 4em;
     z-index: 1001;
@@ -168,7 +173,8 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    width: 200px;
+    width: 50%;
+    
 
     margin-top: 4%;
     transition-duration: 0.2s;
@@ -693,9 +699,6 @@ h5{
     grid-area:  f;
     width: 10%;
     height: 10%;
-    margin-bottom:  3rem;
-    margin-top: -8rem;
-    margin-left: 4rem;
     position:  relative;
     z-index: 1004;
 }
@@ -704,9 +707,6 @@ h5{
     grid-area:  f;
     width: 5%;
     height: 5%;
-    margin-bottom:  3rem;
-    margin-top: -5rem;
-    margin-left: 950px;
     position:  relative;
     z-index: 1004;
 }
@@ -715,9 +715,6 @@ h5{
     grid-area:  f;
     width: 5%;
     height: 5%;
-    margin-bottom:  3rem;
-    margin-top: -3.5rem;
-    margin-left: 1100px;
     position:  relative;
     z-index: 1004;
 }

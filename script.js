@@ -65,8 +65,6 @@ for (let i =0; i < 11; i++) {
 	li.style.animationTimingFunction = `cubic-bezier(${Math.random(),Math.random(),Math.random(),Math.random()})`;
 
 	ulSquares.appendChild(li);
-
-
 }
 
 

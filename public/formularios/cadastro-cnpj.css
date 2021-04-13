@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #F5DF4D;
+}
+
+.container {
+    width: 360px;
+    height: 400px;
+    margin: 3% auto;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #777;
+}
+
+.container form {
+    width: 280px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    transition: 0.5s;
+
+}
+
+form input {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0;
+    border-bottom: 1px solid #999;
+    outline: #F5DF4D;
+    background: transparent;
+}
+
+::placeholder {
+    color: #777;
+}
+
+.btn-box {
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+form button {
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: #472151;
+    border-radius: 30px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#Form2 {
+    left: 450px;
+}
+
+#Form3 {
+    left: 450px;
+}
+
+.step-row {
+    width: 360px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px #000;
+    position: relative;
+}
+
+.step-col {
+    width: 120px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+#progress {
+    position: absolute;
+    height: 100%;
+    width: 120px;
+    background: #472151;
+    transition: 1s;
+}
+
+#progress::after {
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid #472151;
+}
+
+
+/* Logo - Título da página */
+h1 {
+    font-family: Homemade Apple;
+    font-size: 32px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-top: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* Bũttons - trocar CPF e CNPJ */
+
+#buttons {
+    display: flex;
+    justify-content: center;
+
+}
+
+#bt1 {
+    width: 200px;
+    height: 40px;
+    margin: 0 10px;
+    background: #472151;
+    border-radius: 30px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+#bt1 a {
+    text-decoration: none;
+    color: white
+}
+
+/*------------------------------------*/
+
+
+/* 3D NAVEBAR - Opções de Navegação - Fonte: https://codepen.io/chenius/pen/zLppVZ - INÍCIO */
+
+.stage {
+    width: 250px;
+    grid-area: h;
+    /*margin-top:  4em;*/
+    z-index: 1001;
+    margin-top: -2.5rem;
+}
+
+.p {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 0;
+    cursor: pointer;
+    width: 100%;
+    background: #d7cdc4;
+    border-radius: 10px;
+    font-family: Poppins;
+    letter-spacing: 5px;
+}
+
+.div {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    width: 200px;
+
+    margin-top: 4%;
+    transition-duration: 0.2s;
+}
+
+.p:hover {
+    background: white;
+    color: black;
+}
+
+.div:nth-child(odd) {
+    transform: perspective(300px) rotateY(45deg);
+    box-shadow: -2px 2px 7px gray;
+}
+
+.div:nth-child(even) {
+    transform: perspective(300px) rotateY(-45deg);
+    box-shadow: 2px 2px 7px gray;
+}
+
+.div:hover {
+    transform: rotateY(0);
+    background: white;
+    color: black;
+    box-shadow: 0px 0px 0px;
+}
+
+/* 3D NAVEBAR - Opções de Navegação - Fonte: https://codepen.io/chenius/pen/zLppVZ - FIM */
+
+
+/* Validation Form - HTML5 -CSS - INÍCIO */
+/*input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid black;
+}*/

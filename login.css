@@ -208,7 +208,7 @@ body {
 .squares li {
   width: 40px;
   height: 40px;
-  background-color: #472151;
+  background-color: #26072e;                        /* #472151;*/
   display:  block;
   position:  absolute;
   bottom: -40px;
