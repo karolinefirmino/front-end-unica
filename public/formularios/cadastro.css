@@ -11,7 +11,7 @@ html{
 
 .container{
 	width:  360px;
-	height:  400px;
+	height:  480px;
 	margin:  4% auto;
 	background:  #fff;
 	border-radius: 5px;
@@ -35,7 +35,7 @@ h3{
 }
 
 form input {
-	width:  100%;
+	width:  80%;
 	padding: 10px 5px;
 	margin:  5px 0;
 	border: 0;
@@ -114,18 +114,18 @@ form button{
 /* Logo - Título da página */
 h1 {
 	font-family: Homemade Apple ;
-  font-size: 32px;
-  font-weight: lighter;
-  letter-spacing: 1px;
-  display: flex;
-  justify-content: center;
-   color: black;
-   margin-top:  2rem;
+font-size: 32px;
+font-weight: lighter;
+letter-spacing: 1px;
+display: flex;
+justify-content: center;
+color: black;
+margin-top:  2rem;
 }
 
 a{
-  text-decoration: none;
-  color: black;
+text-decoration: none;
+color: black;
 }
 
 /* Bũttons - trocar CPF e CNPJ */
@@ -150,10 +150,55 @@ a{
 }
 
 #bt1 a{
-	 text-decoration: none;
-  color: white
-
+text-decoration: none;
+color: white
 }
 
 
 /*------------------------------------*/
+
+/* CSS Validation - Icons and More*/
+
+/*.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}*/
+
+
+.form-control i {
+	position: absolute;
+	top:40px;
+	right: 10px;
+}
+
+.form-control small {
+	visibility: hidden;
+	position: absolute;
+	bottom: 0; 
+	left: 0;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+	background: rgb(240, 132, 132);
+}
+
+.form-control.success i.fa-check-circle {
+	border-color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	border-color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control.error small {
+	color: #e74c3c;
+	visibility: visible;
+}

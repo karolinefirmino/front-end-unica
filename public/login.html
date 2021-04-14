@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="error"></div>
+    
     <section class="form-section">
         <h1 ><a href="./index.html">Lispector Livraria</a></h1>
         <div class="form-wrapper">
@@ -28,6 +28,7 @@
             </form>
         </div>
     </section>
+    <div id="error"></div>
     <ul class="squares">
     </ul>
     <script src="login-script.js"></script>
@@ -59,7 +60,7 @@
                 else
                     {
                     alert("Você inseriu um endereço de email inválido!!")
-                    console.log('O campo password está em branco')
+                    console.log('Email Inválido')
                     e.preventDefault()
                     errorElement.innerText = messages.join(', ')
                     isValid = false
@@ -73,14 +74,14 @@
                         e.preventDefault()
                         errorElement.innerText = messages.join(', ')
                         }
-                    if(password.value.length > 6) {
+                    if(password.value.length > 7) {
                         console.log('A senha é válida!') 
                         alert("Dados válidos! Login realizado com sucesso!")
                         window.location.href("./index.html")
                     }
                     else {
                         console.log('A senha é inválida')
-                        alert('Senha inválida')
+                        alert('Senha inválida. A senha deve ter no mínimo 8 caracteres.')
                         console.log('A senhá foi preenchida, mas é inválida')
                         password.focus()
                         e.preventDefault()
