@@ -1,5 +1,5 @@
         // Campos do Formulário (Início dos Inputs/Campos do Formulário))
-        var cpf = window.document.getElementById('cpf')
+        var cnpj = window.document.getElementById('cnpj')
         var nome = window.document.getElementById('nome')
         var sobrenome = window.document.getElementById('sobrenome')
         var cep = window.document.getElementById('cep')
@@ -19,68 +19,15 @@
         // ------------------------------------------------------------------
 
         // Verificando se os campos estão preenchidos --> 
-        // CPF 
+        // CNPJ
 
         form.addEventListener('click', (e) => {
-            let messages = []
-            /*if (cpf.value.length == 0 || password.value == null || cpf.value.lenght < 11) 
-        {
-            
-            console.log("CPF Inválido")
-            messages.push('O campo cpf é obrigatório')
-            alert('O campo cpf é obrigatório')
-            console.log('O campo cpf está em branco')
-            cpf.focus()
-            errorElement.innerText = messages.join(', ')
-
-        }
-
-        // Validação de CPF com REGEX - INÍCIO - Verificando se há a quantidade de 11 caracteres e formato
-        var cpfFormat =/^([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}|[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2})$/;
-        if(cpf.value.lenght > 0 || cpf.value.match(cpfFormat)) 
-        {
-            console.log("CPF Válido!")
-            true
-        }
-        else{
-            console.log("CPF Inválido")
-            messages.push('O campo cpf é obrigatório')
-            alert('O campo cpf é obrigatório')
-            console.log('O campo cpf está em branco')
-            cpf.focus()
-            errorElement.innerText = messages.join(', ')
-        }
-        // Verificação dos dígitos verificadores (Receita Federal)
-        function validarCPF(inputCPF){
-            var soma = 0;
-            var resto;
-            var inputCPF = document.getElementById('cpf').value;
-
-            if(inputCPF == '00000000000') return false;
-            for(i=1; i<=9; i++) soma = soma + parseInt(inputCPF.substring(i-1, i)) * (11 - i);
-            resto = (soma * 10) % 11;
-
-            if((resto == 10) || (resto == 11)) resto = 0;
-            if(resto != parseInt(inputCPF.substring(9, 10))) return false;
-
-            soma = 0;
-            for(i = 1; i <= 10; i++) soma = soma + parseInt(inputCPF.substring(i-1, i))*(12-i);
-            resto = (soma * 10) % 11;
-
-            if((resto == 10) || (resto == 11)) resto = 0;
-            if(resto != parseInt(inputCPF.substring(10, 11))) return false;
-            return true;
-            }*/
-        
-            e.preventDefault()
-            
-        // Fim da seção CPF - Fonte consultada/utilizada: https://pt.stackoverflow.com/questions/123741/validar-cpf-com-express%C3%A3o-regular-javascript
-            
-            checkInputs()
+            e.preventDefault();  
+            checkInputs();
     })
 
     function checkInputs() {
-        var cpfValue = cpf.value.trim()
+        var cnpjValue = cnpj.value.trim()
         var nomeValue = nome.value.trim()
         var sobrenomeValue = sobrenome.value.trim()
         var cepValue = cep.value.trim()
@@ -90,19 +37,19 @@
         var passwordValue = password.value.trim()
         var confirmarValue = confirmar.value.trim()
 
-        var cpfFormat = /(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/ ;
-        if(cpfValue.lenght > 0 || cpf.value.match(cpfFormat)) {
+        var cnpjFormat = /(^\d{3}\.\d{3}\.\d{3}\-\d{2}$)|(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)/ ;
+        if(cnpjValue.lenght > 0 || cnpj.value.match(cnpjFormat)) {
 
-            console.log("CPF Válido!")
-            setSuccessFor(cpf)
+            console.log("CNPJ Válido!")
+            setSuccessFor(cnpj)
 
         } else {
             // show error
 
             // add error class
-        console.log("CPF Inválido!")
-        setErrorFor(cpf, "CPF Inválido")
-        cpf.focus()
+        console.log("CNPJ Inválido!")
+        setErrorFor(cnpj, "CNPJ Inválido")
+        cnpj.focus()
 
         } 
 
