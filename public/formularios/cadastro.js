@@ -110,6 +110,7 @@
         console.log("Nome Inválido!")
         setErrorFor(nome, "O campo nome deve ter no mínimo 6 caracteres")
         nome.focus()
+
         } else{
             setSuccessFor(nome)
             console.log('Campo NOME válido/preenchido corretamente')
@@ -119,6 +120,7 @@
         console.log("O campo Sobrenome é obrigatório.")
         setErrorFor(sobrenome, "O campo Sobrenome é obrigatório.")
         sobrenome.focus()
+   
         } else{
             setSuccessFor(sobrenome)
             console.log('Campo SOBRENOME válido/preenchido corretamente')
@@ -132,12 +134,14 @@
             setErrorFor(cep, "CEP Inválido")
             console.log('CEP Inválido!')
             cep.focus()
+  
         }
 
         if(numeroValue === "") {
             setErrorFor(numero, "O Campo Número é obrigatório.")
             console.log("O Campo Número é obrigatório.")
             numero.focus()
+      
         }
 
         // Validação de Email com REGEX  
@@ -150,12 +154,14 @@
                 setErrorFor(email, "Email Inválido!")
                 console.log("Email Inválido!")
                 email.focus()
+            
                 }
 
         if(passwordValue === ""){
             setErrorFor(password, "O Campo Senha é obrigatório.")
             console.log("O Campo Senha é obrigatório.")
             password.focus()
+        
         } else {
             console.log("Senha Válida!")
                 setSuccessFor(email)
@@ -164,6 +170,7 @@
             setErrorFor(confirmar, "O Campo Confirmar Senha é obrigatório.")
             console.log("O Campo Confirmar Senha é obrigatório.")
             confirmar.focus()
+
         } else if(confirmarValue !== password) {
             setErrorFor(confirmar, "Confirmação de Senha não correspondente")
             console.log("Confirmação de Senha não correspondente")
@@ -197,6 +204,8 @@
             small.innerText = message
 
             formControl.className = "form-control error"
+
+            return
         }
 
         function setSuccessFor(input) {

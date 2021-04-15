@@ -878,15 +878,15 @@ h5{
     top:50px;
     display: inline-block;
     -webkit-transition: transform 0.5s ease 0s ;
-       -moz-transition: transform 0.5s ease 0s ;
-         -o-transition: transform 0.5s ease 0s ;
+    -moz-transition: transform 0.5s ease 0s ;
+    -o-transition: transform 0.5s ease 0s ;
             transition: transform 0.5s ease 0s ;
 }
 
 .thanks_active {
     -webkit-transform: translateY(-50px);
-       -moz-transform: translateY(-50px);
-        -ms-transform: translateY(-50px);
-         -o-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
             transform: translateY(-50px);
 }

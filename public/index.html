@@ -202,7 +202,8 @@
         <div class="inscricao">
             <div class="login_bar">
                 <input class="login-sub">
-                <span class="subscribe_button" onclick="subscribeOnClick()">Inscrever-me</span>
+                <!--<span class="subscribe_button" onclick="subscribeOnClick()">Inscrever-me</span>-->
+                <span class="subscribe_button" >Inscrever-me</span>
                 <span class="subscribing"></span>
                 <span class="thanks"> Você foi inscrita(o) com sucesso!</span>
             </div>
@@ -215,8 +216,65 @@
                     </svg>
                 </div>
             </div>
+            
             <div class="info">
-                <h5>Karoline Rodrigues Firmino - 2021</h5>
+                <div class="karol1">
+                <div class="karol"> <!-- -->
+                    <h5>Karoline Rodrigues Firmino - 2021</h5>
+                
+                <div class="creative">
+                    <a id="cc" href="https://creativecommons.org/licenses/?lang=pt_BR" target="_blank"><img src="img/licenca-creative-commons-by-nc-nd.png" /></a>
+                </div>  
+                </div>
+            </div>
+                <div class="bubble">
+                    <div id="git">
+                    <div class="square">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        
+                        <div class="content">
+                            
+                            <p> 
+                                <a href="https://github.com/karolinefirmino/front-end-unica" target="_blank"><img src="img/github.png" /></a>
+                            </p>
+                
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div id="licenca">
+                    <div class="square">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        
+                        <div class="content">
+                            
+                            <p> 
+                                <a id="cc" href="https://creativecommons.org/licenses/?lang=pt_BR" target="_blank"><img src="img/licenca-creative-commons-by-nc-nd.png" /></a>
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div id="linkedin">
+                    <div class="square">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        
+                        <div class="content">
+                            
+                            <p> 
+                                <a href="https://br.linkedin.com/in/karoline-rodrigues-firmino-a3964612a" target="_blank"><img src="img/linkedin.png" /></a>
+                            </p>
+                
+                        </div>
+                    </div>
+                </div>
+            </div>   
             </div>
             
             <!--<div class="licenca"> <a href="https://creativecommons.org/licenses/?lang=pt_BR" target="_blank"><img src="img/licenca-creative-commons-by-nc-nd.png" /></a></div>
@@ -341,7 +399,25 @@
 
         });
         </script>
-     
+
+        <script> 
+        var email = document.querySelector('.login-sub')
+
+        // Validação de Email com REGEX  
+        var subs = document.querySelector('.subscribe_button')
+        subs.addEventListener('click', function() {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(email.value.lenght > 0 || email.value.match(mailformat)){
+            console.log("Email Válido!")
+        } else
+            {
+            console.log("Email Inválido!")
+            email.focus()
+        }
+        })
+
+        </script>
+
     </body>
 </div>
 </html>

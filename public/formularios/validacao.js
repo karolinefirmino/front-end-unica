@@ -1,4 +1,4 @@
-const fields = document.querySelectorAll("[required]")
+/*const fields = document.querySelectorAll("[required]")
 
 console.log(fields)
 
@@ -12,7 +12,7 @@ function customValidation(event) {
 
 for (field of fields){
 	field.addEventListener("invalid", customValidation);
-}
+}*/
 
 
 

@@ -90,7 +90,7 @@ form button{
 	position:  relative;
 }
 
-#progress{
+.step{
 	position:  absolute;
 	height: 100%;
 	width:  120px;
@@ -98,7 +98,7 @@ form button{
 	transition:  1s;
 }
 
-#progress::after{
+.step::after{
 	content: '';
 	height: 0;
 	width: 0;
